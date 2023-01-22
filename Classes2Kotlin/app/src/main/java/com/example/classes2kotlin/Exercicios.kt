@@ -1,12 +1,9 @@
 package com.example.classes2kotlin
 
-abstract class Vehicle (private val id: Int){
-    private var velocity: Long
-    abstract var acceleration: Long
+interface Vehicle {
+    var velocity: Long
+    var acceleration: Long
 
-    init {
-        this.velocity = 0
-    }
 
     fun accelerate() {
         this.velocity += this.acceleration
@@ -21,16 +18,20 @@ abstract class Vehicle (private val id: Int){
     }
 
     fun actualVelocity () = this.velocity
+}
+
+class Carro(val id: Int): Vehicle {
+    override var velocity: Long = 0
+    override var acceleration: Long = 10
 
     override fun toString() = "id: $id, Velocidade: $velocity, Aceleração: $acceleration"
 }
 
-class Carro(id: Int): Vehicle(id) {
-    override var acceleration: Long = 10
-}
-
-class Moto(id: Int): Vehicle(id) {
+class Moto(val id: Int): Vehicle {
+    override var velocity: Long = 0
     override var acceleration: Long = 5
+
+    override fun toString() = "id: $id, Velocidade: $velocity, Aceleração: $acceleration"
 }
 
 fun main() {
