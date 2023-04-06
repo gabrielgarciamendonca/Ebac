@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">concepts</string>
+    <string name="subtitle_home">conceitos de</string>
+    <string name="title">KOTLIN</string>
+    <string name="button_title">NAVEGAÇÃO COM INTENTS</string>
+    <string name="go_back">Voltar</string>
+</resources>
